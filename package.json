@@ -41,7 +41,6 @@
     "lodash": "^4.5.0",
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
-    "react-infinite": "^0.6.0",
     "react-router": "^1.0.0",
     "reflux": "^0.3.0"
   }

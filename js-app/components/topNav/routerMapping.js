@@ -3,8 +3,8 @@ import _ from 'lodash'
 
 const RegHeadMap = [
     {reg: '/', title: "最新消息", name:'index'},
-    {reg: '/forward/*', title: "转发微博", name:'forward'},
-    {reg: '/publish', title: "发布微博", name:'publish'}
+    {reg: 'forward/*', title: "转发微博", name:'forward'},
+    {reg: 'publish', title: "发布微博", name:'publish'}
 ]
 module.exports = {
     routeTitle: function(path) {

@@ -14,8 +14,11 @@ export default class TopNav extends React.Component {
             reLoadBroad: function() {
                 broadAction.refreshStart();
             },
-            writeBroad: function() {
+            publishBroad: function() {
                 that.props.history.pushState(null, 'publish');
+            },
+            cancelPublish: function() {
+                that.props.history.goBack();
             }
         }
     }
@@ -73,11 +76,11 @@ class TopNavButton extends React.Component {
 const TopNavButtonsMap = {
     index: [
         {component: TopNavTool, type: "refresh", loc: "right", action: 'reLoadBroad'},
-        {component: TopNavTool, type: "compose", loc: "right", action: 'writeBroad'}
+        {component: TopNavTool, type: "compose", loc: "right", action: 'publishBroad'}
     ],
     forward: [],
     publish: [
-        {component: TopNavButton, type: "goBack", loc: "left", action: 'writeBroad', label: '取消'},
-        {component: TopNavButton, type: "negative", loc: "right", action: 'writeBroad', label: '发送'}
+        {component: TopNavButton, type: "goBack", loc: "left", action: 'cancelPublish', label: '取消'},
+        {component: TopNavButton, type: "negative", loc: "right", action: 'confirmPublish', label: '发送'}
     ]
 }

@@ -7,6 +7,10 @@
 
 body, html { font-size: 100%; 	padding: 0; margin: 0;}
 
+input, textarea, button, select {
+  font-size: 14px;
+}
+
 dd,ul {
   -webkit-margin-start:0;
   -webkit-padding-start:0;
@@ -370,6 +374,43 @@ div.menu.animate li:nth-of-type(7){transition-delay: 0.36s;}
           }
         }
       }
+    }
+  }
+  .emoji-textarea {
+    padding: 5px;
+    line-height: 24px;
+    min-height: 80px;
+    margin: 10px 0 0 0;
+    background-color: #fff;
+    border-left: none;
+    border-right: none;
+  }
+  .operations {
+    padding: 10px;
+    background-color: #fefefe;
+    text-align: center;
+    .picImport {
+      background: url(../images/picIcon.png) no-repeat;
+      width: 20px;
+      height: 17px;
+      background-size: cover;
+    }
+    .atFunction {
+      background: url(../images/atIcon.png) no-repeat;
+      width: 20px;
+      height: 20px;
+      background-size: cover;
+    }
+    .emotions {
+      background: url(../images/emotionIcon.png) no-repeat;
+      width: 20px;
+      height: 20px;
+      background-size: cover;
+    }
+    .picImport, .atFunction, .emotions {
+      display: inline-block;
+      margin: 0 30px;
+      cursor: pointer;
     }
   }
 }
