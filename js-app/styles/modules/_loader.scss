@@ -1,0 +1,31 @@
+@import "_animation";
+
+$loaderSelector: '.loader';
+$loaderBarContainerSelector: '.react-spinner';
+$loaderBarSelector: '.react-spinner_bar';
+$loaderBarNumber: 12;
+$degreePerBar: 360 / $loaderBarNumber;
+$animationDelay: 10;
+
+#{$loaderSelector} {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+
+  #{$loaderBarContainerSelector} {
+    top: 50px;
+  }
+
+  #{$loaderBarSelector} {
+
+    @for $i from 1 through $loaderBarNumber {
+      $degree: $i * $degreePerBar;
+      &:nth-child(#{$i}) {
+        @include animationDelay(#{($i - $loaderBarNumber) / $animationDelay}s);
+        @include transform(rotate(#{$degree}deg) translate(146%));
+      }
+    }
+  }
+}
