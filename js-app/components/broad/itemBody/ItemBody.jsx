@@ -1,18 +1,24 @@
 var React = require('react');
+import {Link, History} from 'react-router'
 import ItemText from './ItemText.jsx'
 import ItemImages from './ItemImages.jsx'
 
-export default class ItemBody extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    render() {
-        let {topics, images, content} = this.props;
+const ItemBody = React.createClass({
+    mixins:[History],
+
+    openDetail: function(id) {
+        if (id) this.history.pushState(null, 'detail/'+id);
+        else return false
+    },
+    render: function() {
+        let {id, topics, images, content} = this.props;
         return (
-            <span className="castingContent">
+            <span className="castingContent" onTouchStart={this.openDetail.bind(this, id)}>
                 <ItemText topics={topics} content={content}/>
                 <ItemImages images={images}/>
             </span>
         )
     }
-}
+})
+
+export default ItemBody;

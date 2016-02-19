@@ -17,11 +17,14 @@ export default class TopNav extends React.Component {
             publishBroad: function() {
                 that.props.history.pushState(null, 'publish');
             },
-            cancelPublish: function() {
+            goback: function() {
                 that.props.history.goBack();
             },
             commentBroad: function() {
                 that.props.history.pushState(null, 'comment');
+            },
+            toIndex: function() {
+                that.props.history.pushState(null, '/');
             }
         }
     }
@@ -86,11 +89,14 @@ const TopNavButtonsMap = {
         {component: TopNavButton, type: "negative", loc: "right", action: 'confirmPublish', label: '发送'}
     ],
     publish: [
-        {component: TopNavButton, type: "goBack", loc: "left", action: 'cancelPublish', label: '取消'},
+        {component: TopNavButton, type: "goBack", loc: "left", action: 'goback', label: '取消'},
         {component: TopNavButton, type: "negative", loc: "right", action: 'confirmPublish', label: '发送'}
     ],
     comment: [
-        {component: TopNavButton, type: "goBack", loc: "left", action: 'cancelPublish', label: '取消'},
+        {component: TopNavButton, type: "goBack", loc: "left", action: 'goback', label: '取消'},
         {component: TopNavButton, type: "negative", loc: "right", action: 'confirmPublish', label: '发送'}
+    ],
+    detail: [
+        {component: TopNavTool, type: "left-nav", loc: "left", action: 'toIndex'}
     ]
 }

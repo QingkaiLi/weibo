@@ -416,6 +416,22 @@ div.menu.animate li:nth-of-type(7){transition-delay: 0.36s;}
       cursor: pointer;
     }
   }
+  .typesList {
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    nav {
+      padding: 0 10px;
+      border-bottom: 1px solid #eee;
+      div {
+        display: inline-block;
+        padding: 8px;
+      }
+      .current div {
+        border-bottom: 3px solid #ff8800;
+      }
+    }
+  }
 }
 
 .tags {

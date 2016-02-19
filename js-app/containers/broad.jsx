@@ -35,7 +35,6 @@ var Broad = React.createClass({
                     this.state.broadList.length > 0?
                         <BroadList data={this.state.broadList} loadMore={this.loadMore}/>:
                         null
-
                 }
             </div>
         )

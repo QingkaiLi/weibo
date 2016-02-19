@@ -68,7 +68,10 @@ router.get('/get/:id', function(req, res, next) {
                     title: titles[Math.floor(Math.random()*titles.length)],
                     topics: Math.random() > 0.5? generateArray(topics): [],
                     content: contents[Math.floor(Math.random()*contents.length)],
-                    images: generatePics()
+                    images: generatePics(),
+                    likes: Math.floor(Math.random() * 100),
+                    comments: Math.floor(Math.random() * 100),
+                    forwards: Math.floor(Math.random() * 100)
                 }
 
                 res.setHeader('Content-Type', 'application/json');

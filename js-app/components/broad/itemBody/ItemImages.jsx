@@ -11,9 +11,12 @@ export default class ItemImages extends React.Component {
             return <img src={text} key={index}/>
         })
     }
+    openImage() {
+        // TODO
+    }
     render() {
         return (
-            <span className="castingImgs">
+            <span className="castingImgs" onTouchStart={this.openImage.bind(this)}>
                 {this._getContent()}
             </span>
         )
