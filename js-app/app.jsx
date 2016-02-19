@@ -6,6 +6,7 @@ import {Router, Route, IndexRoute} from 'react-router';
 import Broad from './containers/broad';
 import Forward from './containers/Forward'
 import Publish from './containers/Publish'
+import Comment from './containers/Comment'
 import NotFound from './containers/NotFound';
 import TopNav from './components/topNav/TopNav';
 import BurgerToggle from './components/topNav/BurgerToggle'
@@ -39,6 +40,7 @@ var routes = (
             <IndexRoute component={Broad} onLeave={leaveBroadCallback}/>
             <Route path="forward/:item" component={Forward} onEnter={forwardCallback}/>
             <Route path="publish" component={Publish}/>
+            <Route path="comment/:item" component={Comment} onEnter={forwardCallback}/>
             <Route path="*" component={NotFound}/>
         </Route>
     </Router>

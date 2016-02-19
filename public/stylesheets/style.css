@@ -58,19 +58,6 @@ div.menu.animate li:nth-of-type(7){transition-delay:.36s}
 .mask{position:fixed;background:rgba(0,0,0,.3);top:0;left:0;right:0;bottom:0;z-index:1}
 .content.weiBody{color:#333;font-size:14px!important;margin:10px auto;border-top:1px solid #ccc;border-bottom:1px solid #ccc;background:#f7f7f7;padding-top:30px;overflow:hidden}
 .content.weiBody .broadList li{overflow:hidden;background-color:#fff;border-top:1px solid #eee;border-bottom:1px solid #eee;margin:10px 0}
-.content.weiBody .broadList li .listItem{padding:10px;display:block}
-.content.weiBody .broadList li .listItem .castingInfo{overflow:hidden;position:relative;display:block}
-.content.weiBody .broadList li .listItem .castingInfo .followIcon{float:right;padding:1px 10px;color:#000;border:1px solid #ccc;margin-top:2px;font-size:10px}
-.content.weiBody .broadList li .listItem .castingInfo .followIcon .icon{color:#f80;font-size:14px;margin-right:2px;vertical-align:text-top}
-.content.weiBody .broadList li .listItem .castingInfo .followed .icon{color:#999}
-.content.weiBody .broadList li .listItem .castingInfo .avatarBorder{float:left;margin-right:10px;width:45px;height:45px;border-radius:23px;border:2px solid #ccc;box-sizing:content-box;position:relative}
-.content.weiBody .broadList li .listItem .castingInfo .avatarBorder img{width:45px;height:45px;border-radius:23px}
-.content.weiBody .broadList li .listItem .castingInfo .vipIcon{position:absolute;z-index:2;left:30px;bottom:0;background:url(../images/vipIcon.png) no-repeat;width:16px;height:16px;background-size:cover}
-.content.weiBody .broadList li .listItem .castingInfo .insName{vertical-align:baseline}
-.content.weiBody .broadList li .listItem .castingInfo time{display:block;color:#999;font-size:10px}
-.content.weiBody .broadList li .listItem .castingContent .castingTxt{display:block;margin:5px 0}
-.content.weiBody .broadList li .listItem .castingContent .castingImgs{display:block}
-.content.weiBody .broadList li .listItem .castingContent .castingImgs img{float:none;width:80px;height:80px;border:none;border-radius:0;margin:2px}
 .content.weiBody .broadList li .castingOprations{display:block;padding:5px 0;border-top:1px solid #eee}
 .content.weiBody .broadList li .castingOprations .oprationItem{display:inline-block;width:32%;text-align:center;padding:3px;font-size:14px;color:#777;border-left:1px solid #eee}
 .content.weiBody .broadList li .castingOprations .oprationItem .forwardIcon{background:url(../images/forwardIcon.png) no-repeat;width:18px;height:15px;background-size:cover}
@@ -78,8 +65,21 @@ div.menu.animate li:nth-of-type(7){transition-delay:.36s}
 .content.weiBody .broadList li .castingOprations .oprationItem .praiseIcon{background:url(../images/praiseIcon.png) no-repeat;width:14px;height:15px;background-size:cover}
 .content.weiBody .broadList li .castingOprations .oprationItem .praiseIcon.on{background:url(../images/praisedIcon.png) no-repeat;background-size:cover}
 .content.weiBody .broadList li .castingOprations .oprationItem .commentIcon,.content.weiBody .broadList li .castingOprations .oprationItem .forwardIcon,.content.weiBody .broadList li .castingOprations .oprationItem .praiseIcon,.content.weiBody .broadList li .castingOprations .oprationItem .praisedIcon{vertical-align:text-bottom;display:inline-block;margin-right:3px}
+.content.weiBody .listItem{padding:10px;display:block}
+.content.weiBody .listItem .castingInfo{overflow:hidden;position:relative;display:block}
+.content.weiBody .listItem .castingInfo .followIcon{float:right;padding:1px 10px;color:#000;border:1px solid #ccc;margin-top:2px;font-size:10px}
+.content.weiBody .listItem .castingInfo .followIcon .icon{color:#f80;font-size:14px;margin-right:2px;vertical-align:text-top}
+.content.weiBody .listItem .castingInfo .followed .icon{color:#999}
+.content.weiBody .listItem .castingInfo .avatarBorder{float:left;margin-right:10px;width:45px;height:45px;border-radius:23px;border:2px solid #ccc;box-sizing:content-box;position:relative}
+.content.weiBody .listItem .castingInfo .avatarBorder img{width:45px;height:45px;border-radius:23px}
+.content.weiBody .listItem .castingInfo .vipIcon{position:absolute;z-index:2;left:30px;bottom:0;background:url(../images/vipIcon.png) no-repeat;width:16px;height:16px;background-size:cover}
+.content.weiBody .listItem .castingInfo .insName{vertical-align:baseline}
+.content.weiBody .listItem .castingInfo time{display:block;color:#999;font-size:10px}
+.content.weiBody .listItem .castingContent .castingTxt{display:block;margin:5px 0}
+.content.weiBody .listItem .castingContent .castingImgs{display:block}
+.content.weiBody .listItem .castingContent .castingImgs img{float:none;width:80px;height:80px;border:none;border-radius:0;margin:2px}
 .content.weiBody .emoji-textarea{padding:5px;line-height:24px;min-height:80px;margin:10px 0 0;background-color:#fff;border-left:none;border-right:none}
-.content.weiBody .operations{padding:10px;background-color:#fefefe;text-align:center}
+.content.weiBody .operations{padding:10px;background-color:#fefefe;text-align:center;border:1px solid #ddd;border-left:none;border-right:none}
 .content.weiBody .operations .picImport{background:url(../images/picIcon.png) no-repeat;width:20px;height:17px;background-size:cover}
 .content.weiBody .operations .atFunction{background:url(../images/atIcon.png) no-repeat;width:20px;height:20px;background-size:cover}
 .content.weiBody .operations .emotions{background:url(../images/emotionIcon.png) no-repeat;width:20px;height:20px;background-size:cover}

@@ -1,4 +1,5 @@
 var React = require('react');
+import { Link } from 'react-router'
 
 export default class ActionComment extends React.Component {
     constructor(props) {
@@ -6,11 +7,13 @@ export default class ActionComment extends React.Component {
     }
     render () {
         return(
-            <span className="oprationItem">
-                <span className="commentIcon">
+            <Link to={"comment/"+this.props.id}>
+                <span className="oprationItem">
+                    <span className="commentIcon">
+                    </span>
+                    {this.props.count}
                 </span>
-                {this.props.count}
-            </span>
+            </Link>
         )
     }
 }

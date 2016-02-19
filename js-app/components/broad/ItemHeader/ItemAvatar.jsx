@@ -13,11 +13,11 @@ export default class ItemHeader extends React.Component {
                 </span>
                 {
                     title.isVIP? <span className="vipIcon"></span>: null
-                }
+                    }
                 <span className="insName">{title.name}</span>
                 {
                     title.star? <span className="tags red">专</span>: null
-                }
+                    }
                 <time>{createTime}</time>
             </span>
         )

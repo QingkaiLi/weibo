@@ -10,8 +10,8 @@ export default class Menu extends React.Component {
     _getNavData() {
         return [
             {itemClass: 'head', itemLabel: '', itemIcon: 'myProfileIcon'},
-            {itemClass: 'current', itemLabel: '首页', itemIcon: 'castingIcon'},
-            {itemClass: '', itemLabel: '消息', itemIcon: 'findProjectIcon'},
+            {itemClass: 'current', itemLabel: '消息首页', itemIcon: 'castingIcon'},
+            {itemClass: '', itemLabel: '粉丝-关注', itemIcon: 'findProjectIcon'},
             {itemClass: '', itemLabel: '发现', itemIcon: 'findServiceIcon'},
             {itemClass: '', itemLabel: '切换身份', itemIcon: 'switchIDIcon'}
         ]

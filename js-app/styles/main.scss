@@ -255,84 +255,6 @@ div.menu.animate li:nth-of-type(7){transition-delay: 0.36s;}
       border-top: 1px solid #eee;
       border-bottom: 1px solid #eee;
       margin: 10px 0;
-      .listItem {
-        padding: 10px;
-        display: block;
-        .castingInfo {
-          overflow: hidden;
-          position: relative;
-          display: block;
-          .followIcon {
-            float: right;
-            padding: 1px 10px;
-            color: #000;
-            border: 1px solid #ccc;
-            margin-top: 2px;
-            font-size: 10px;
-            .icon {
-              color: #ff8800;
-              font-size: 14px;
-              margin-right: 2px;
-              vertical-align: text-top;
-            }
-          }
-          .followed {
-            .icon {
-              color: #999;
-            }
-          }
-          .avatarBorder {
-            float: left;
-            margin-right: 10px;
-            width: 45px;
-            height: 45px;
-            border-radius: 23px;
-            border: 2px solid #ccc;
-            box-sizing: content-box;
-            position: relative;
-            img {
-              width: 45px;
-              height: 45px;
-              border-radius: 23px;
-            }
-          }
-          .vipIcon {
-            position: absolute;
-            z-index: 2;
-            left: 30px;
-            bottom: 0;
-            background: url(../images/vipIcon.png) no-repeat;
-            width: 16px;
-            height: 16px;
-            background-size: cover;
-          }
-          .insName {
-            vertical-align: baseline;
-          }
-          time {
-            display: block;
-            color: #999;
-            font-size: 10px;
-          }
-        }
-        .castingContent {
-          .castingTxt {
-            display: block;
-            margin: 5px 0;
-          }
-          .castingImgs {
-            display: block;
-            img {
-              float: none;
-              width: 80px;
-              height: 80px;
-              border: none;
-              border-radius: 0;
-              margin: 2px;
-            }
-          }
-        }
-      }
       .castingOprations {
         display: block;
         padding: 5px 0;
@@ -376,6 +298,84 @@ div.menu.animate li:nth-of-type(7){transition-delay: 0.36s;}
       }
     }
   }
+  .listItem {
+    padding: 10px;
+    display: block;
+    .castingInfo {
+      overflow: hidden;
+      position: relative;
+      display: block;
+      .followIcon {
+        float: right;
+        padding: 1px 10px;
+        color: #000;
+        border: 1px solid #ccc;
+        margin-top: 2px;
+        font-size: 10px;
+        .icon {
+          color: #ff8800;
+          font-size: 14px;
+          margin-right: 2px;
+          vertical-align: text-top;
+        }
+      }
+      .followed {
+        .icon {
+          color: #999;
+        }
+      }
+      .avatarBorder {
+        float: left;
+        margin-right: 10px;
+        width: 45px;
+        height: 45px;
+        border-radius: 23px;
+        border: 2px solid #ccc;
+        box-sizing: content-box;
+        position: relative;
+        img {
+          width: 45px;
+          height: 45px;
+          border-radius: 23px;
+        }
+      }
+      .vipIcon {
+        position: absolute;
+        z-index: 2;
+        left: 30px;
+        bottom: 0;
+        background: url(../images/vipIcon.png) no-repeat;
+        width: 16px;
+        height: 16px;
+        background-size: cover;
+      }
+      .insName {
+        vertical-align: baseline;
+      }
+      time {
+        display: block;
+        color: #999;
+        font-size: 10px;
+      }
+    }
+    .castingContent {
+      .castingTxt {
+        display: block;
+        margin: 5px 0;
+      }
+      .castingImgs {
+        display: block;
+        img {
+          float: none;
+          width: 80px;
+          height: 80px;
+          border: none;
+          border-radius: 0;
+          margin: 2px;
+        }
+      }
+    }
+  }
   .emoji-textarea {
     padding: 5px;
     line-height: 24px;
@@ -389,6 +389,9 @@ div.menu.animate li:nth-of-type(7){transition-delay: 0.36s;}
     padding: 10px;
     background-color: #fefefe;
     text-align: center;
+    border: 1px solid #ddd;
+    border-left: none;
+    border-right: none;
     .picImport {
       background: url(../images/picIcon.png) no-repeat;
       width: 20px;

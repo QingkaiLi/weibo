@@ -60,12 +60,15 @@ router.get('/get/:id', function(req, res, next) {
         fs.readFile( path.join(__dirname,'/api/broadList.json'),
             function(err, dt) {
                 var data = JSON.parse(dt);
-                var topics = data.topics,
+                var titles = data.titles,
+                    topics = data.topics,
                     contents = data.contents;
                 var result = {
                     id: Math.floor(Math.random()* 100),
+                    title: titles[Math.floor(Math.random()*titles.length)],
                     topics: Math.random() > 0.5? generateArray(topics): [],
-                    content: contents[Math.floor(Math.random()*contents.length)]
+                    content: contents[Math.floor(Math.random()*contents.length)],
+                    images: generatePics()
                 }
 
                 res.setHeader('Content-Type', 'application/json');

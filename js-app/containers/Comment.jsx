@@ -5,8 +5,8 @@ import SpinnerAction from '../components/common/spinner/spinnerAction.js'
 import OperateBar from '../components/broad/publish/operateBar.jsx'
 import ItemContent from '../components/broad/ItemContent.jsx'
 
-var Forward = React.createClass({
-    displayName: 'Forward',
+var Publish = React.createClass({
+    displayName: 'Comment',
     mixins: [Reflux.listenTo(broadStore, 'onStoreUpdate')],
     getInitialState: function () {
         return {
@@ -20,25 +20,17 @@ var Forward = React.createClass({
             this.setState({selectedBroad: data.selectedBroad, loading: false});
         }
     },
-    getSubject() {
-        if (this.state.loading)
-            return '';
-        let {content, title} = this.state.selectedBroad;
-        let name = title.name;
-        let res = `//@${name}:${content}`;
-        return res;
-    },
     render: function () {
         return(
             <div className="content weiBody">
-                <textarea className="emoji-textarea" value={this.getSubject()}/>
+                <textarea className="emoji-textarea" placeholder="写评论..."/>
                 {
                     this.state.loading? null:
                         <ItemContent>
                             <ItemContent.ItemHeader
                                 title={this.state.selectedBroad.title}
                                 createTime={this.state.selectedBroad.createTime}
-                                noFollowPanel = {true}/>
+                                noFollowPanel={true}/>
                             <ItemContent.ItemBody
                                 topics={this.state.selectedBroad.topics}
                                 content={this.state.selectedBroad.content}
@@ -54,4 +46,4 @@ var Forward = React.createClass({
     }
 });
 
-module.exports = Forward;
+module.exports = Publish;
