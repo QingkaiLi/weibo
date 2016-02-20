@@ -5,7 +5,6 @@ import broadAction from '../actions/broadAction.js'
 import SpinnerAction from '../components/common/spinner/spinnerAction.js'
 import OperateBar from '../components/broad/publish/operateBar.jsx'
 import ItemContent from '../components/broad/ItemContent.jsx'
-import DetailsContent from '../components/broad/detail/detailsContent.jsx'
 import TabToolBar from '../components/broad/detail/tabToolBar.jsx'
 
 var Detail = React.createClass({
@@ -55,8 +54,8 @@ var Detail = React.createClass({
                         <TabToolBar.Item {...{isBadge: true, count: likes}}>赞</TabToolBar.Item>
                     </TabToolBar>
                 }
-                {this.props.children}
                 </div>
+                {this.props.children}
             </div>
         )
     }

@@ -1,7 +1,6 @@
 var React = require('react');
 import InfiniteScroll from '../common/infiniteScroll/InfiniteScroll.js'
 import BroadItem from './broadItem.jsx'
-import Infinite from 'react-infinite'
 import SpinnerBar from '../common/spinner/SpinnerBar.jsx'
 import broadAction from '../../actions/broadAction.js'
 import Reflux from 'reflux'

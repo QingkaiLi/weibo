@@ -79,7 +79,54 @@ router.get('/get/:id', function(req, res, next) {
             });
     }, 1000);
 });
-
+router.get('/:id/forward/:page', function(req, res, next) {
+    setTimeout(function(){
+        var page = req.params.page || 1;
+        fs.readFile( path.join(__dirname,'/api/broadList.json'),
+            function(err, dt) {
+                var data = JSON.parse(dt);
+                var titles = data.titles,
+                    topics = data.topics,
+                    contents = data.contents;
+                var results = [];
+                for (var i =0; i < PAGE_SIZE; i++) {
+                    results.push({
+                        id: Math.floor(Math.random()* 100),
+                        title: titles[Math.floor(Math.random()*titles.length)],
+                        createTime: ((page - 1)* PAGE_SIZE + i) +'小时前',
+                        topics: Math.random() > 0.5? generateArray(topics): [],
+                        content: contents[Math.floor(Math.random()*contents.length)]
+                    })
+                }
+                res.setHeader('Content-Type', 'application/json');
+                res.send(results);
+            });
+    }, 1000);
+});
+router.get('/:id/comment/:page', function(req, res, next) {
+    setTimeout(function(){
+        var page = req.params.page || 1;
+        fs.readFile( path.join(__dirname,'/api/broadList.json'),
+            function(err, dt) {
+                var data = JSON.parse(dt);
+                var titles = data.titles,
+                    topics = data.topics,
+                    contents = data.contents;
+                var results = [];
+                for (var i =0; i < PAGE_SIZE; i++) {
+                    results.push({
+                        id: Math.floor(Math.random()* 100),
+                        title: titles[Math.floor(Math.random()*titles.length)],
+                        createTime: ((page - 1)* PAGE_SIZE + i) +'小时前',
+                        topics: Math.random() > 0.5? generateArray(topics): [],
+                        content: contents[Math.floor(Math.random()*contents.length)]
+                    })
+                }
+                res.setHeader('Content-Type', 'application/json');
+                res.send(results);
+            });
+    }, 1000);
+});
 
 
 

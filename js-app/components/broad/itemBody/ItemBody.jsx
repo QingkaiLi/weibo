@@ -13,7 +13,7 @@ const ItemBody = React.createClass({
     render: function() {
         let {id, topics, images, content} = this.props;
         return (
-            <span className="castingContent" onTouchStart={this.openDetail.bind(this, id)}>
+            <span className="castingContent" onClick={this.openDetail.bind(this, id)}>
                 <ItemText topics={topics} content={content}/>
                 <ItemImages images={images}/>
             </span>
