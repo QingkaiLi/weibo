@@ -6,7 +6,8 @@ const RegHeadMap = [
     {reg: 'forward/*', title: "转发微博", name: 'forward'},
     {reg: 'publish', title: "发微博", name: 'publish'},
     {reg: 'comment/*', title: "写评论", name: 'comment'},
-    {reg: 'detail/**', title: "微博正文", name: 'detail'}
+    {reg: 'detail/**', title: "微博正文", name: 'detail'},
+    {reg: 'profileIndex', title: "个人主页", name: 'profileIndex'}
 ]
 module.exports = {
     routeTitle: function(path) {

@@ -201,9 +201,9 @@ div.menu.animate li:nth-of-type(7){transition-delay: 0.36s;}
   height:18px;
   background-size:cover;
 }
-.findVestorIcon {
+.profileIcon {
   display:inline-block;
-  background:url(../images/findVestorIcon.png) no-repeat;
+  background:url(../images/avatarIcon.png) no-repeat;
   width:17px;
   height:18px;
   background-size:cover;
@@ -237,7 +237,7 @@ div.menu.animate li:nth-of-type(7){transition-delay: 0.36s;}
   left:0;
   right:0;
   bottom:0;
-  z-index:1;
+//  z-index:1;
 }
 .content.weiBody {
   color: #333;

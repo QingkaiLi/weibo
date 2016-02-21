@@ -10,6 +10,7 @@ import Comment from './containers/Comment'
 import Detail from './containers/Detail'
 import ForwardDetail from './components/broad/detail/forwardDetail.jsx'
 import CommentDetail from './components/broad/detail/commentDetail.jsx'
+import ProfileIndex from './containers/ProfileIndex.jsx'
 import NotFound from './containers/NotFound';
 import TopNav from './components/topNav/TopNav';
 import BurgerToggle from './components/topNav/BurgerToggle'
@@ -29,7 +30,7 @@ var Weibo = React.createClass({
         return (
             <div style={{height: '100%'}}>
                 <BurgerToggle {...this.props} open={this.state.openMenu} toggle={this.toggleMenu}/>
-                <Menu open={this.state.openMenu} toggle={this.toggleMenu}/>
+                <Menu {...this.props} open={this.state.openMenu} toggle={this.toggleMenu}/>
                 <TopNav {...this.props} />
                 {this.props.children}
                 <Spinner/>
@@ -53,6 +54,7 @@ var routes = (
                 <IndexRoute component={ForwardDetail}/>
                 <Route path="commentDetail" component={CommentDetail}/>
             </Route>
+            <Route path="profileIndex" component={ProfileIndex}/>
             <Route path="*" component={NotFound}/>
         </Route>
     </Router>

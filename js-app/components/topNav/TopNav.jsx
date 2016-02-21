@@ -98,5 +98,6 @@ const TopNavButtonsMap = {
     ],
     detail: [
         {component: TopNavTool, type: "left-nav", loc: "left", action: 'toIndex'}
-    ]
+    ],
+    profileIndex: []
 }

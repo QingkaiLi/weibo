@@ -50,12 +50,12 @@ div.menu.animate li:nth-of-type(7){transition-delay:.36s}
 .findEnterpriseIcon,.findProjectIcon{width:18px;height:18px;display:inline-block}
 .findEnterpriseIcon{background:url(../images/findEnterpriseIcon.png) no-repeat;background-size:cover}
 .findProjectIcon{background:url(../images/findProjectIcon.png) no-repeat;background-size:cover}
-.findVestorIcon{display:inline-block;background:url(../images/findVestorIcon.png) no-repeat;width:17px;height:18px;background-size:cover}
+.profileIcon{display:inline-block;background:url(../images/avatarIcon.png) no-repeat;width:17px;height:18px;background-size:cover}
 .findRoadshowIcon,.findServiceIcon,.switchIDIcon{display:inline-block;width:18px;height:18px}
 .findServiceIcon{background:url(../images/findServiceIcon.png) no-repeat;background-size:cover}
 .findRoadshowIcon{background:url(../images/findRoadshowIcon.png) no-repeat;background-size:cover}
 .switchIDIcon{background:url(../images/switchID.png) no-repeat;background-size:cover}
-.mask{position:fixed;background:rgba(0,0,0,.3);top:0;left:0;right:0;bottom:0;z-index:1}
+.mask{position:fixed;background:rgba(0,0,0,.3);top:0;left:0;right:0;bottom:0}
 .content.weiBody{color:#333;font-size:14px!important;margin:10px auto;border-top:1px solid #ccc;border-bottom:1px solid #ccc;background:#f7f7f7;padding-top:30px;overflow:hidden}
 .content.weiBody .broadList li{overflow:hidden;background-color:#fff;border-top:1px solid #eee;border-bottom:1px solid #eee;margin:10px 0}
 .content.weiBody .broadList li .castingOprations{display:block;padding:5px 0;border-top:1px solid #eee}
