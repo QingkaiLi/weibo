@@ -1,5 +1,5 @@
 var ReactDOM = require('react-dom');
-import {routeTitle, routeName} from './routerMapping.js'
+import {routeInfo, navItems, RouteNameMap} from './routerMapping.js'
 import broadAction from '../../actions/broadAction.js'
 
 export default class TopNav extends React.Component {
@@ -34,7 +34,7 @@ export default class TopNav extends React.Component {
     _getContent() {
         var that = this;
         let path = this.props.location.pathname;
-        let btnItems = TopNavButtonsMap[routeName(path)];
+        let btnItems = navItems(path);
         return (
             btnItems.map(function(x, index) {
                 var {component,
@@ -53,51 +53,15 @@ export default class TopNav extends React.Component {
     }
     render () {
         let path = this.props.location.pathname;
+        let routeObj = routeInfo(path);
+        let navClazz = routeObj.name == RouteNameMap.PROFILE_INDEX? "opacity-50": '';
         return (
-            <header className="bar bar-nav" name="top">
+            <header className={"bar bar-nav " +navClazz} name="top">
                 {
                     this._getContent()
                 }
-                <h1 className="title">{routeTitle(path)}</h1>
+                <h1 className="title">{routeObj.title}</h1>
             </header>
         )
     }
-}
-
-class TopNavTool extends React.Component {
-    render() {
-        let {type, loc, action} = this.props;
-        let clazz = `icon icon-${type} pull-${loc}`;
-        return <a className={clazz} onTouchStart={action}></a>
-    }
-}
-class TopNavButton extends React.Component {
-    render() {
-        let {type, loc, action} = this.props;
-        let clazz = `btn btn-${type} pull-${loc}`;
-        return <a className={clazz} onTouchStart={action}>{this.props.label}</a>
-    }
-}
-
-const TopNavButtonsMap = {
-    index: [
-        {component: TopNavTool, type: "refresh", loc: "right", action: 'reLoadBroad'},
-        {component: TopNavTool, type: "compose", loc: "right", action: 'publishBroad'}
-    ],
-    forward: [
-        {component: TopNavButton, type: "goBack", loc: "left", action: 'goback', label: '取消'},
-        {component: TopNavButton, type: "negative", loc: "right", action: 'confirmPublish', label: '发送'}
-    ],
-    publish: [
-        {component: TopNavButton, type: "goBack", loc: "left", action: 'goback', label: '取消'},
-        {component: TopNavButton, type: "negative", loc: "right", action: 'confirmPublish', label: '发送'}
-    ],
-    comment: [
-        {component: TopNavButton, type: "goBack", loc: "left", action: 'goback', label: '取消'},
-        {component: TopNavButton, type: "negative", loc: "right", action: 'confirmPublish', label: '发送'}
-    ],
-    detail: [
-        {component: TopNavTool, type: "left-nav", loc: "left", action: 'toIndex'}
-    ],
-    profileIndex: []
 }

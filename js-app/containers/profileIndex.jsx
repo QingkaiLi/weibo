@@ -1,6 +1,5 @@
 var React = require('react');
-//import Slider from 'react-slick'
-import Swipe from '../components/common/swipe/swipe.jsx'
+import BannerSlider from '../components/broad/profile/banner/BannerSlider.jsx'
 
 var ProfileIndex = React.createClass({
     displayName: 'ProfileIndex',
@@ -13,22 +12,26 @@ var ProfileIndex = React.createClass({
             dots: true,
             infinite: true,
             speed: 500,
-            slidesToShow: 1,
-            slidesToScroll: 1,
             lazyLoad: true,
             autoplay: true
         };
         return (
             <div className="content weiBody">
-                <Swipe {...settings}>
-                    <div><h3>1</h3></div>
-                    <div><h3>2</h3></div>
-                    <div><h3>3</h3></div>
-                    <div><h3>4</h3></div>
-                    <div><h3>5</h3></div>
-                    <div><h3>6</h3></div>
-                    <div><h3>7</h3></div>
-                </Swipe>
+                <section style={{marginTop: '-40px'}}>
+                    <BannerSlider />
+                </section>
+                <div className="profileSummary">
+                    <div className="proflie-avatar">
+                        <img src={'/images/avatar-host.jpg'} width='90' height='90'/>
+                        <div>
+
+                            SSSS
+                        </div>
+                        <div>
+                            VVVV
+                        </div>
+                    </div>
+                </div>
             </div>
         );
     }
