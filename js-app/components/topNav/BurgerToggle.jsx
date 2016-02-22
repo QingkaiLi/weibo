@@ -7,7 +7,7 @@ export default class BurgerToggle extends React.Component {
     render () {
         let open = this.props.open;
         return (
-            ['/', '/profileIndex'].indexOf(this.props.location.pathname)?
+            ['/', '/profileIndex'].indexOf(this.props.location.pathname) >=0?
                 <div className={classnames("burger", {"open": open})}
                         onTouchStart={this.toggle.bind(this)}>
                     <div className={classnames("x", {"rotate45": open})}></div>

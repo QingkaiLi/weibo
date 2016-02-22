@@ -85,7 +85,7 @@ const TopNavButtonsMap = {
         {component: TopNavTool, type: "compose", loc: "right", action: 'publishBroad'}
     ],
     forward: [
-        {component: TopNavButton, type: "goBack", loc: "left", action: 'cancelPublish', label: '取消'},
+        {component: TopNavButton, type: "goBack", loc: "left", action: 'goback', label: '取消'},
         {component: TopNavButton, type: "negative", loc: "right", action: 'confirmPublish', label: '发送'}
     ],
     publish: [

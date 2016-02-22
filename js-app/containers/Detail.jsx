@@ -54,8 +54,9 @@ var Detail = React.createClass({
                         <TabToolBar.Item {...{isBadge: true, count: likes}}>赞</TabToolBar.Item>
                     </TabToolBar>
                 }
+
                 </div>
-                {this.props.children}
+{this.props.children}
             </div>
         )
     }

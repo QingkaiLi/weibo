@@ -1,5 +1,6 @@
 export default class MenuItem extends React.Component {
-    navTo() {
+    navTo(e) {
+        e.preventDefault();
         this.props.navTo(this.props.url)
     }
     render () {
