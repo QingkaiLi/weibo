@@ -120,6 +120,8 @@ div.menu.animate li:nth-of-type(7){transition-delay:.36s}
 .content.weiBody .profileSummary{position:relative;height:65px;margin-top:-30px;border-top:1px solid #eee;border-bottom:1px solid #eee}
 .content.weiBody .profileSummary .proflie-avatar{width:90px;height:90px;top:-60px;position:absolute;left:20px}
 .content.weiBody .profileSummary .proflie-avatar img{width:90px;height:90px}
+.content.weiBody .profileSummary .profile-name{height:50%;margin-left:120px;font-size:18px}
+.content.weiBody .profileSummary .profile-signature{height:50%;margin-left:20px;color:#777;font-size:12px}
 .tags{display:inline-block;padding:2px 10px;border:1px solid #f80;border-radius:5px;color:#f80;margin:1px;font-size:12px}
 .tags.red{background-color:#FF5151;color:#fff;border:none;padding:0;width:26px;height:26px;line-height:26px;border-radius:50%;text-align:center}
 .topic{color:#2ba7d3;margin:0 5px}

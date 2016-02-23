@@ -1,37 +1,38 @@
 var React = require('react');
+import Reflux from 'reflux';
 import BannerSlider from '../components/broad/profile/banner/BannerSlider.jsx'
+import ProfileSummary from '../components/broad/profile/profileSummary.jsx'
+import ProfileBroad from '../components/broad/profile/profileBroad.jsx'
+import profileAction from '../actions/profileAction.js'
+import profileStore from '../stores/profileStore.js'
+import SpinnerAction from '../components/common/spinner/spinnerAction.js'
 
 var ProfileIndex = React.createClass({
     displayName: 'ProfileIndex',
-
-    handleLeftSwipe: function (e) {
-        alert("dsdsa")
+    mixins: [Reflux.listenTo(profileStore, 'onStoreUpdate')],
+    getInitialState:function() {
+        return {
+            profileInfo: {},
+            broadList: [],
+            loading: true
+        }
+    },
+    componentDidMount:function() {
+        SpinnerAction.open();
+        profileAction.load();
+    },
+    onStoreUpdate:function(data) {
+        SpinnerAction.close();
+        this.setState({profileInfo: data.profileInfo, broadList: data.broadList, loading: false})
     },
     render: function () {
-        var settings = {
-            dots: true,
-            infinite: true,
-            speed: 500,
-            lazyLoad: true,
-            autoplay: true
-        };
         return (
-            <div className="content weiBody">
+            <div className="content weiBody" style={{overflowY: 'scroll'}}>
                 <section style={{marginTop: '-40px'}}>
                     <BannerSlider />
                 </section>
-                <div className="profileSummary">
-                    <div className="proflie-avatar">
-                        <img src={'/images/avatar-host.jpg'} width='90' height='90'/>
-                        <div>
-
-                            SSSS
-                        </div>
-                        <div>
-                            VVVV
-                        </div>
-                    </div>
-                </div>
+                {this.state.loading? null: <ProfileSummary data={this.state.profileInfo}/>}
+                {this.state.loading? null: <ProfileBroad data={this.state.broadList}/> }
             </div>
         );
     }

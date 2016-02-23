@@ -1,17 +1,17 @@
 {
   "titles":[
-    {"name": "任志强", "avatar": "avatar-1.jpg", "vip": true},
-    {"name": "微天下", "avatar": "avatar-2.jpg", "ad": true, "linked": true},
-    {"name": "帝国时代Online", "avatar": "avatar-3.jpg", "vip": true, "star": true},
-    {"name": "晚安荼蘼", "avatar": "avatar-4.jpg", "star": true},
-    {"name": "鬼鬼心理学", "avatar": "avatar-5.jpg", "vip": true, "star": true},
-    {"name": "奇葩二货的日常", "avatar": "avatar-6.jpg"},
-    {"name": "星霖", "avatar":"avatar-7.jpg", "vip": true},
-    {"name": "零食小喵", "avatar": "avatar-8.jpg", "vip": true, "star": true, "ad": true},
-    {"name": "思想聚焦", "avatar": "avatar-9.jpg", "vip": true,"linked": true},
-    {"name": "所长-别开枪是我", "avatar": "avatar-10.jpg"},
-    {"name": "触动新心灵的哲思", "avatar":"avatar-11.jpg", "star": true, "linked": true},
-    {"name": "如何逼疯你老公", "avatar":"avatar-12.jpg"}
+    {"name": "任志强", "avatar": "avatar-1.jpg", "vip": true, "signature": "要让年轻人买不起房"},
+    {"name": "微天下", "avatar": "avatar-2.jpg", "ad": true, "linked": true, "signature": "放眼世界，面向未来"},
+    {"name": "帝国时代Online", "avatar": "avatar-3.jpg", "vip": true, "star": true, "signature": "比LOL更好玩的RPG游戏"},
+    {"name": "晚安荼蘼", "avatar": "avatar-4.jpg", "star": true, "signature": "心若向阳，无谓悲伤"},
+    {"name": "鬼鬼心理学", "avatar": "avatar-5.jpg", "vip": true, "star": true, "signature": "杀！"},
+    {"name": "奇葩二货的日常", "avatar": "avatar-6.jpg", "signature": "今天出门又把自己丢了"},
+    {"name": "星霖", "avatar":"avatar-7.jpg", "vip": true, "signature": "看透不说透"},
+    {"name": "零食小喵", "avatar": "avatar-8.jpg", "vip": true, "star": true, "ad": true, "signature": "喵~~"},
+    {"name": "思想聚焦", "avatar": "avatar-9.jpg", "vip": true,"linked": true, "signature": "最强大脑"},
+    {"name": "所长-别开枪是我", "avatar": "avatar-10.jpg", "signature": "腐败问题不解决，中国难以腾飞"},
+    {"name": "触动新心灵的哲思", "avatar":"avatar-11.jpg", "star": true, "linked": true, "signature": "面朝大海，春暖花开"},
+    {"name": "如何逼疯你老公", "avatar":"avatar-12.jpg", "signature": "起床洗碗啦"}
   ],
   "topics": [
     "屌丝", "最美警察Top10", "家局装饰", "厨房的艺术", "楼市还能再跌么"

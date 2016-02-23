@@ -127,6 +127,38 @@ router.get('/:id/comment/:page', function(req, res, next) {
             });
     }, 1000);
 });
+router.get('/profile/:id', function(req, res, next) {
+    setTimeout(function(){
+        var paramId = req.params.id || 0;
+        console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"+paramId)
+        fs.readFile( path.join(__dirname,'/api/broadList.json'),
+            function(err, dt) {
+                var data = JSON.parse(dt);
+                var titles = data.titles,
+                    topics = data.topics,
+                    contents = data.contents;
+                var broadList = [];
+                for (var i =0; i < PAGE_SIZE; i++) {
+                    broadList.push({
+                        id: Math.floor(Math.random()* 100),
+                        title: titles[Math.floor(Math.random()*titles.length)],
+                        topics: Math.random() > 0.5? generateArray(topics): [],
+                        content: contents[Math.floor(Math.random()*contents.length)],
+                        images: generatePics(),
+                        createTime: (i) +'小时前',
+                        likes: Math.floor(Math.random() * 100),
+                        comments: Math.floor(Math.random() * 100),
+                        forwards: Math.floor(Math.random() * 100),
+                        followed: Math.random() > 0.5,
+                        like: Math.random() > 0.5
+                    })
+                }
+                var profileInfo = paramId != 0? titles[0]:{name: "綮恺...", avatar: "avatar-host.jpg", vip: true, signature: "你若盛开，清风自来"};
+                res.setHeader('Content-Type', 'application/json');
+                res.send({broadList, profileInfo});
+            });
+    }, 1000);
+});
 
 
 

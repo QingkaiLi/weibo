@@ -464,6 +464,17 @@ div.menu.animate li:nth-of-type(7){transition-delay: 0.36s;}
         height: 90px;
       }
     }
+    .profile-name {
+      height: 50%;
+      margin-left: 120px;
+      font-size: 18px;
+    }
+    .profile-signature {
+      height: 50%;
+      margin-left: 20px;
+      color: #777;
+      font-size: 12px;
+    }
   }
 }
 
