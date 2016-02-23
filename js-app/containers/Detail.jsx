@@ -39,7 +39,7 @@ var Detail = React.createClass({
                         this.state.loading? null:
                             <li>
                                 <ItemContent>
-                                    <ItemContent.ItemHeader {...{title, createTime, followed}} />
+                                    <ItemContent.ItemHeader {...{title, createTime, followed, id}} />
                                     <ItemContent.ItemBody {...{topics, content, images}} />
                                 </ItemContent>
                             </li>

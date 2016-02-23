@@ -18,8 +18,6 @@ var ProfileIndex = React.createClass({
         }
     },
     componentDidMount:function() {
-        SpinnerAction.open();
-        profileAction.load();
     },
     onStoreUpdate:function(data) {
         SpinnerAction.close();

@@ -1,6 +1,7 @@
 import broadAction from '../actions/broadAction.js'
 import spinnerAction from '../components/common/spinner/spinnerAction.js'
 import {broadStore} from '../stores/broadStore.js'
+import profileAction from '../actions/profileAction.js'
 
 export function forwardCallback(location) {
     const id = location ? location.params.item : 0;
@@ -9,4 +10,10 @@ export function forwardCallback(location) {
 }
 export function leaveBroadCallback() {
     broadStore.resetState();
+}
+
+export function profileCallback(location) {
+    var id = location ? location.params.id : 0;
+    spinnerAction.open();
+    profileAction.load(id);
 }

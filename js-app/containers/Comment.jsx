@@ -28,6 +28,7 @@ var Publish = React.createClass({
                     this.state.loading? null:
                         <ItemContent>
                             <ItemContent.ItemHeader
+                                id={this.state.selectedBroad.id}
                                 title={this.state.selectedBroad.title}
                                 createTime={this.state.selectedBroad.createTime}
                                 noFollowPanel={true}/>

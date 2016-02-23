@@ -153,7 +153,7 @@ router.get('/profile/:id', function(req, res, next) {
                         like: Math.random() > 0.5
                     })
                 }
-                var profileInfo = paramId != 0? titles[0]:{name: "綮恺...", avatar: "avatar-host.jpg", vip: true, signature: "你若盛开，清风自来"};
+                var profileInfo = paramId != 0? titles[0]:{name: "綮恺...", avatar: "avatar-host.jpg", vip: true, signature: "你若盛开，清风自来", isSelf: true};
                 res.setHeader('Content-Type', 'application/json');
                 res.send({broadList, profileInfo});
             });

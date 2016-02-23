@@ -1,13 +1,14 @@
 var React = require('react');
-
-export default class ItemHeader extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    render() {
+import {History} from 'react-router'
+var ItemHeader = React.createClass({
+    mixins:[History],
+    navToProfile:function() {
+        this.history.pushState(null, 'profileIndex/'+this.props.id);
+    },
+    render:function() {
         let {title, createTime} = this.props;
         return (
-            <span style={{display: 'inline-block'}}>
+            <span style={{display: 'inline-block'}} onTouchStart={this.navToProfile}>
                 <span className="avatarBorder">
                     <img src={"/images/"+title.avatar}  />
                 </span>
@@ -22,4 +23,6 @@ export default class ItemHeader extends React.Component {
             </span>
         )
     }
-}
+})
+
+module.exports = ItemHeader;

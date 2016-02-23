@@ -11,7 +11,7 @@ export default class BroadItem extends React.Component {
         return (
             <li>
                 <ItemContent>
-                    <ItemContent.ItemHeader {...{title, createTime, followed}}/>
+                    <ItemContent.ItemHeader {...{id, title, createTime, followed}}/>
                     <ItemContent.ItemBody {...{id, topics, content, images}} />
                 </ItemContent>
                 <ActionBar data={this.props}/>

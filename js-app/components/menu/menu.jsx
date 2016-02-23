@@ -12,7 +12,7 @@ export default class Menu extends React.Component {
         return [
             {itemClass: 'head', itemLabel: '', itemIcon: 'myProfileIcon'},
             {itemClass: 'current', itemLabel: '消息首页', itemIcon: 'castingIcon', url: "/"},
-            {itemClass: '', itemLabel: '个人主页', itemIcon: 'profileIcon', url: "/profileIndex"},
+            {itemClass: '', itemLabel: '个人主页', itemIcon: 'profileIcon', url: "/profileIndex/0"},
             {itemClass: '', itemLabel: '粉丝-关注', itemIcon: 'findProjectIcon'},
             {itemClass: '', itemLabel: '发现', itemIcon: 'findServiceIcon'},
             {itemClass: '', itemLabel: '切换身份', itemIcon: 'switchIDIcon'}
