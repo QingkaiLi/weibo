@@ -1,7 +1,7 @@
 import classnames from 'classnames'
 import RoutePattern from 'route-pattern'
 
-const NeedMenuNav = ['/', '/profileIndex/**'];
+const NeedMenuNav = ['/', '/profileIndex/**', '/fans'];
 
 export default class BurgerToggle extends React.Component {
     toggle() {

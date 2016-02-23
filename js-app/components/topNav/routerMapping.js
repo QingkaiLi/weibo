@@ -8,7 +8,8 @@ const RouteNameMap = {
     PUBLISH: "publish",
     COMMENT: "comment",
     DETAIL: "detail",
-    PROFILE_INDEX: "profileIndex"
+    PROFILE_INDEX: "profileIndex",
+    FANS: "fans"
 }
 const RegHeadMap = [
     {reg: '/', title: "最新消息", name: RouteNameMap.INDEX},
@@ -16,7 +17,8 @@ const RegHeadMap = [
     {reg: 'publish', title: "发微博", name: RouteNameMap.PUBLISH},
     {reg: 'comment/*', title: "写评论", name: RouteNameMap.COMMENT},
     {reg: 'detail/**', title: "微博正文", name: RouteNameMap.DETAIL},
-    {reg: 'profileIndex/**', title: "个人主页", name: RouteNameMap.PROFILE_INDEX}
+    {reg: 'profileIndex/**', title: "个人主页", name: RouteNameMap.PROFILE_INDEX},
+    {reg: 'fans', title: "粉丝", name: RouteNameMap.PROFILE_INDEX}
 ]
 const TopNavButtonsMap = {
     [RouteNameMap.INDEX]: [

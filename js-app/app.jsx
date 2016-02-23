@@ -11,12 +11,13 @@ import Detail from './containers/Detail'
 import ForwardDetail from './components/broad/detail/forwardDetail.jsx'
 import CommentDetail from './components/broad/detail/commentDetail.jsx'
 import ProfileIndex from './containers/ProfileIndex.jsx'
+import Fans from './containers/Fans.jsx'
 import NotFound from './containers/NotFound';
 import TopNav from './components/topNav/TopNav';
 import BurgerToggle from './components/topNav/BurgerToggle'
 import Menu from './components/menu/menu'
 import Spinner from './components/common/spinner/Spinner.jsx'
-import {leaveBroadCallback, forwardCallback, profileCallback} from './utils/pageMountCallback.js'
+import {leaveBroadCallback, forwardCallback, profileCallback, fansCallback} from './utils/pageMountCallback.js'
 import createHistory from 'history/lib/createHashHistory';
 
 var Weibo = React.createClass({
@@ -55,6 +56,7 @@ var routes = (
                 <Route path="commentDetail" component={CommentDetail}/>
             </Route>
             <Route path="profileIndex/:id" component={ProfileIndex} onEnter={profileCallback}/>
+            <Route path="fans" component={Fans} onEnter={fansCallback}/>
             <Route path="*" component={NotFound}/>
         </Route>
     </Router>

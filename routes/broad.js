@@ -160,6 +160,25 @@ router.get('/profile/:id', function(req, res, next) {
     }, 1000);
 });
 
-
+router.get('/fans', function(req, res, next) {
+    setTimeout(function(){
+        fs.readFile( path.join(__dirname,'/api/broadList.json'),
+            function(err, dt) {
+                var data = JSON.parse(dt);
+                var titles = data.titles,
+                    topics = data.topics,
+                    contents = data.contents;
+                var results = [];
+                for (var i =0; i < PAGE_SIZE; i++) {
+                    results.push({
+                        id: Math.floor(Math.random()* 100),
+                        title: titles[Math.floor(Math.random()*titles.length)]
+                    })
+                }
+                res.setHeader('Content-Type', 'application/json');
+                res.send(results);
+            });
+    }, 1000);
+});
 
 module.exports = router;
