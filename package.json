@@ -39,7 +39,7 @@
     "fstream": "^0.1.17",
     "history": "^1.17.0",
     "lodash": "^4.5.0",
-    "react": "^0.14.6",
+    "react": "^15.0.0",
     "react-dom": "^0.14.6",
     "react-router": "^1.0.0",
     "reflux": "^0.3.0"
